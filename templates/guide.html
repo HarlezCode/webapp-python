@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color:rgba(15,145,255,255);">
+        <div class="container-fluid">
+            <img src="{{url_for('static',filename='logo.png')}}" style="width: 340px; height:100px;">
+            <div>
+                <a style="padding-right:10px;color:white;">{{USER}}</a>
+                <a href="/logout" class="btn btn-outline-dark"> Logout </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="margin-top:8%;outline-style:groove;outline-border:4px;padding:20px;outline-color:rgba(210, 226, 237, 1);">
+        <a href="/" class="btn btn-primary">Back</a>
+        <p style="font-size:40px;margin-left:30%;">Welcome to My Novel List!</p>
+        <p style="font-size:20px;margin-left:20%;"> The following will be a guide to use this web application! </p>
+        <p style="font-size:40px;margin-left:40%;"><br>Home Page</p>
+        <img src="{{url_for('static',filename='Guide_1.png')}}" style="width:1268px;">
+
+        <p style="font-size:20px;margin-left:20%;">There are four main buttons in the home page.</p>
+        <p style="font-size:20px;margin-left:20%;">
+            <b>Add Filter</b>: If you click this button the following window will popup.
+        </p>
+        <img src ="{{url_for('static',filename='Guide_2.png')}}" style="width:1268px;">
+        <p style="font-size:20px;margin-left:20%">
+            This is where you can search your list with the following filters.<br><br>
+            ----- Rating -----<br>
+            Enter any rating and it will filter by those ratings <br><br>
+            ----- Tags -----<br>
+            You can enter any number of tags and it will filter the list by the results. <br><br>
+            The format is: magic, high fantasy, novel <br>
+            ----- Review -----<br>
+            You can enter any words, sentences or even incomplete sentences, it will find results
+            that have the phrase in it somewhere. <br><br>
+            After clicking confirm, you have to click search. <br><br>
+            Note: if you have more than one filter, it will give you any results that matches any one filter, but the
+            result is sorted by the best matches. <br>
+        </p>
+        <p style="font-size:20px;margin-left:20%;">
+            <br>
+            <b>Clear filter</b>: If you click this button, it will clear your filters and give you the full list.
+            <br><br>
+            <b>Search bar</b>: You can type any name in here and it you find you the results that matches that name
+            <br><br>
+            <b>Search</b>: If you click this button, it will search the list with your filters and the name in the search bar,
+            if there is nothing in the search bar, it will ignore it and vise versa with the filters.
+            <br>
+            <br>
+        </p>
+        <p style="font-size:40px;margin-left:35%;">
+            Adding books to your list
+        </p>
+        <p style="font-size:20px;margin-left:20%;">
+            <b>Add book</b>: When you click this button, it will bring you to the following page.
+        </p>
+        <img src="{{url_for('static',filename='Guide_3.png')}}" style="width:1268px;">
+        <p style="font-size:20px;margin-left:20%;">
+            <b>Search</b>: Same thing as the home page but except also you can search for books using the author name.
+            <br><br>
+            <b>Add to list</b>: When you click this button, the following page will popup.
+        </p>
+        <img src="{{url_for('static',filename='Guide_6.png')}}" style="width:1268px;">
+        <p style="font-size:20px;margin-left:20%;">
+            <b>Delete</b>: Deletes the item off your list. (This page will appear again when you want to edit these values after you enter the book into your list)
+            <br><br>
+            Note: For the tags, if you want to enter a tag with more than one word,<br> you have to use "_" to separate the phrase, e.g. magic_fantasy
+            <br><br>
+            Now, back to the other page!
+        </p>
+        <p style="font-size:20px;margin-left:20%;">
+            <b>Not here?</b>: If you click this button, the following page will show.
+        </p>
+        <img src="{{url_for('static',filename='Guide_4.png')}}" style="width:1268px;">
+        <p style="font-size:20px;margin-left:20%;">
+            When you don't see your book in the database, you can add it manually. <br> After you click submit,
+            it will be entered into the database for you and the other people using this web application to access as well.
+            <br><br>
+            Note: For the tags, it is the same deal as last time, use "_" as spaces.
+            <br><br>
+            Now, back to the other page!
+        </p>
+        <p style="font-size:20px;margin-left:20%;">
+            <b>Edit</b>: If you click this button, the following page will show.
+        </p>
+        <img src="{{url_for('static',filename='Guide_5.png')}}" style="width:1268px;">
+        <p style="font-size:20px;margin-left:20%;">
+            This is where you can edit the books in the database, (description, author, title). <br>
+            Note: For the tags, it is the same deal as last time, use "_" as spaces. <br>
+            CAUTION: When you delete books in here, it will delete it off the database, <br>
+            which will automatically delete it off of every list that the book is on.
+        </p>
+        <p style="font-size:40px;margin-left:35%;">
+            Editing books in your list
+        </p>
+        <p style="font-size:20px;margin-left:20%;">
+            When you have a book in your list, it will look like the following.
+        </p>
+        <img src="{{url_for('static',filename='Guide_7.png')}}" style="width:1268px;">
+        <p style="font-size:20px;margin-left:20%;">
+            <b>Edit</b>: When you click this button it will bring you to this page.
+        </p>
+        <img src="{{url_for('static',filename='Guide_8.png')}}" style="width:1268px;">
+        <p style="font-size:20px;margin-left:20%;">
+            Looks familiar? <br>
+            It is the same page as when you add a book to your list, but now you can edit the details of the book or delete the book off your list.
+            <br>
+            That is it! You can always come back to this page by clicking "guide" in the nav bar.
+        </p>
+
+        <div><a href="/" class="btn btn-primary">Back</a></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
